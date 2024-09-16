@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.social-links{
+    text-decoration: none;
+    color: #007bff;
+}
+#picture{
+    max-width: 300px;
+    height: auto;
+}
+/* Sticky Header */
+.sticky-header {
+    background-color: #007bff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.logo {
+    font-size: 30px;
+    margin-left: 25px;
+    text-decoration: none;
+    color: #fff;
+
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 25px;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+nav a:hover {
+    color: orange;
+}
+nav a:active{
+    color:orange;
+}
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.left-column {
+    flex: 1;
+    margin-right: 20px;
+    max-width: 400px;
+    /*position: sticky;
+    top:0;*/
+}
+
+/*Drop Down button in the research page*/
+.ContentDropDown{
+    cursor: pointer;
+}
+.summary{
+    border-top: 5px solid blue;
+    border-radius: 5px;
+    width: 50%;
+    padding: 5px;
+    box-shadow: 1px 1px 2px #bbbbbb;
+    Background-colo: #eeeeee;
+}
+.right-column {
+    flex: 2;
+    max-width: 600px;
+}
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+.style-list{
+    list-style-type:none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .sticky-header {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .logo {
+        margin: 10px;
+        text-decoration: none;
+        color: #fff;
+    }
+    #picture{
+        width: 250px;
+        height: auto;
+    }
+    footer p{
+        display: block;
+    }
+    .right-column,
+    .left-column {
+        margin: 0;
+        max-width: 90%;
+        flex: 1;
+        padding: 10px;
+    }
+}
