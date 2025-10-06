@@ -18,7 +18,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="research.html">Research</a></li>
             <li><a href="teaching.html">Teaching</a></li>
-            <li><a href="files/CV_Onil_B.pdf">CV</a>
+            <li><a href="files/CV_OIB.pdf">CV</a>
             <li><a href="references.html">References</a></li>
         </ul>
     </div>
@@ -26,17 +26,30 @@
 <div id="content">
     <div id="right">
         <h2>Current Working Papers</h2>
+
         <ul>
-            <li>"Correcting Sample Selection Bias in PISA Rankings" 
-            <li>About the paper :This project investigates how survival bias, due to the fact that PISA surveys only students still in school at age 15, can distort international comparisons of educational outcomes. I develop a modification of the Heckman selection model to adjust for this selection bias and apply it to PISA 2018 data. The corrected rankings reveal substantial differences in performance estimates, highlighting the importance of accounting for sample selection.
+            Title : Compositional Difference-in-Differences for categorical outcomes (JMP).
+            <li>Abstract: In a difference-in-differences framework with categorical outcomes, we may be interested in both the treatment effects on categorical quantities and categorical shares (the probability mass function). In this case, imposing linear parallel trends whether on categorical quantities or shares would result in a scale-dependent model, a risk of generating negative counterfactual predictions, and the introduction of constraints on shares that are inconsistent with classical discrete choice theory. We introduce Compositional Difference-in-Differences (CoDiD), a non-linear method, which identifies both the counterfactual quantities and proportions under a parallel growth assumption: absent treatment, each category’s absolute size would proportionally grow or decline similarly in both groups. Under the random utility model, this would imply that the relative preferences for each category (quantified by log-odds) would evolve similarly in the absence of treatment. Analytically, it also implies that in the absence of treatment, shares are reallocated across categories in a similar way in both groups. Finally, geometrically, it implies that the probability mass functions trace parallel trajectories in the probability simplex under Aitchison geometry in the absence of treatment. We extend CoDiD to (i) derive bounds under weaker assumptions, (ii) accommodate staggered adoption, and (iii) develop a synthetic CoDiD approach. We illustrate the method's utility through two empirical applications: one on how early voting reforms affects voter choice in US presidential elections, and another on how the Regional Greenhouse Gas Initiative affected the composition of electricity generation from sources like gas, coal, nuclear, and renewables.
+            <br>
+         </li>
+            
+        </ul>Title : Correcting sample selection bias with categorical outcomes
+            <li>Abstract: In this paper, we propose a novel method for correcting sample selection bias when the outcome of interest is categorical, such as occupational choice, health status, or field of study. Classical approaches to sample selection rely on strong parametric distributional assumptions, which may be restrictive in practice. While the recent framework of \cite{chernozhukov2023distribution} offers a nonparametric identification using a local Gaussian representation (LGR) that holds for any bivariate joint distributions. This makes this approach limited to ordered discrete outcomes. We therefore extend it by developing a local representation that applies to joint probabilities, thereby eliminating the need to impose an artificial ordering on categories. Our representation decomposes each joint probability into marginal probabilities and a category-specific association parameter that captures how selection differentially affects each outcome. Under exclusion restrictions analogous to those in the LGR model, we establish nonparametric point identification of the latent categorical distribution. Building on this identification result, we introduce a semiparametric multinomial logit model with sample selection, propose a computationally tractable two-step estimator, and derive its asymptotic properties. This framework significantly broadens the set of tools available for analyzing selection in categorical and other discrete outcomes, offering substantial relevance for empirical work across applied economics. 
             </li>
             <br>
         </ul>
 
 
-        <ul>
-            <li>"Estimating Treatment Effects under Sample Selection" 
-            <li>About the paper : This paper addresses the dual challenges of endogenous treatment assignment and sample selection, which often arise in applied work, particularly in randomized controlled trials (RCTs) with noncompliance and attrition. I propose a semiparametric framework for identifying and estimating treatment effects under both sources of bias, providing more reliable inference in real-world experimental settings.
+        
+        <ul> Title: Identifying treatment effects on categorical outcomes in IV models
+            <li>Abstract: We develop an instrumental variable framework for identifying the distributions of potential outcomes when the outcome is categorical. Our approach is based on a local representation of the joint probability of potential outcomes and the unobserved factors that drive treatment assignment. This representation motivates a new identifying assumption, so-called \emph{association similarity}, stating that the local association between potential outcomes and unobserved heterogeneity remains stable across treatment states. Under this assumption, we achieve point identification of treatment effects for categorical, multinomial, and unordered outcomes using only a binary instrument. The identification strategy is constructive, allowing for practical estimation and inference procedures. We then provide an empirical illustration where we estimate the effect of private health insurance on both physical and mental health.
+            </li>
+            <br>
+        </ul>
+
+
+        <ul> Title: Correcting Sample Selection Bias in PISA Rankings
+            <li>Abstract: This paper addresses the critical issue of sample selection bias in cross-country comparisons based on international assessments such as the Programme for International Student Assessment (PISA). Although PISA is widely used to benchmark educational performance across countries, it samples only students who remain enrolled in school at age 15. This introduces survival bias, particularly in countries with high dropout rates, potentially leading to distorted comparisons. To correct for this bias, I develop a simple adjustment of the classical Heckman selection model tailored to settings with fully truncated outcome data. My approach exploits the joint normality of latent errors and leverages information on the selection rate, allowing identification of the counterfactual mean outcome for the full population of 15-year-olds. Applying this method to PISA 2018 data, I show that adjusting for selection bias results in substantial changes in country rankings based on average performance. These results highlight the importance of accounting for non-random sample selection to ensure accurate and policy-relevant international comparisons of educational outcomes.
             </li>
             <br>
         </ul>
