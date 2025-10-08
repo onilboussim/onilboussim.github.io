@@ -91,9 +91,22 @@ ul#nav li {
     text-align: center;
 }
 
+ul#nav li a {
+    font-size: 20px;  /* Augmentation de la taille du texte (était probablement 14px ou 16px) */
+    line-height: 48px;  /* Augmentation de la hauteur de ligne (correspondait à la hauteur du li) */
+    padding: 0 24px;  /* Augmentation du padding horizontal pour plus d'espace */
+}
+
+ul#nav li {
+    height: 48px;  /* Augmentation de la hauteur des éléments de liste */
+}
+
+ul#nav {
+    height: 48px;  /* Augmentation de la hauteur de la navigation */
+}
+
 ul#nav a {
     float: left;
-    width: 95px;
     padding: 5px 0;
     background: red;
     text-decoration: none;
