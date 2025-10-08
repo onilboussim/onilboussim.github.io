@@ -1,4 +1,4 @@
-        * {
+       * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -56,6 +56,19 @@
             line-height: 1.4;
         }
 
+        .card-title p {
+            margin: 0;
+        }
+
+        .card-title a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .card-title a:hover {
+            text-decoration: underline;
+        }
+
         .jmp-badge {
             display: inline-block;
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -80,52 +93,46 @@
             font-weight: 600;
         }
 
-            .card-abstract {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 0 auto;
-    }
+        .card-abstract details {
+            display: inline;
+            margin-left: 5px;
+        }
 
-    .card-abstract details {
-      display: inline;
-      margin-left: 5px;
-    }
+        .card-abstract summary {
+            cursor: pointer;
+            color: #667eea;
+            display: inline;
+            list-style: none;
+            user-select: none;
+            font-weight: 500;
+        }
 
-    .card-abstract summary {
-      cursor: pointer;
-      color: #0066cc;
-      display: inline;
-      list-style: none;
-      user-select: none;
-    }
+        .card-abstract summary::-webkit-details-marker {
+            display: none;
+        }
 
-    .card-abstract summary::-webkit-details-marker {
-      display: none;
-    }
+        .card-abstract summary:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
 
-    .card-abstract summary:hover {
-      color: #0052a3;
-      text-decoration: underline;
-    }
+        .card-abstract summary::after {
+            content: " [+]";
+            font-weight: bold;
+        }
 
-    .card-abstract summary::after {
-      content: " [+]";
-      font-weight: bold;
-    }
+        .card-abstract details[open] summary::after {
+            content: " [−]";
+        }
 
-    .card-abstract details[open] summary::after {
-      content: " [−]";
-    }
+        .abstract-content {
+            display: block;
+            margin-top: 10px;
+        }
 
-    .abstract-content {
-      display: block;
-      margin-top: 8px;
-      text-align: justify;
-    }
+        em {
+            font-style: italic;
+        }
 
         @media (max-width: 768px) {
             .cards-grid {
