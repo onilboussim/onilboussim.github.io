@@ -9,6 +9,10 @@
             margin: 0 auto;
         }
 
+        .title-reference {
+            font: bold 2.1em 'Open Sans', Arial, sans-serif;
+        }
+
         h1 {
             color: white;
             text-align: center;
