@@ -1,7 +1,14 @@
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 
 .card {
@@ -12,6 +19,13 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 20px;
+        border-radius: 10px;
+    }
 }
 
 .card::before {
@@ -35,4 +49,22 @@
     font-weight: bold;
     margin-bottom: 15px;
     line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.2em;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
 }
