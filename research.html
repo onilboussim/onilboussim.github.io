@@ -1,89 +1,271 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Onil BOUSSIM: Research</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="google-site-verification" content="I3GAMdWFlVX9I1t6MyOhMOST-TYgMF2X3xr1_56BgPE"/>
-    <meta name="keywords" content="onil boussim, Boussim Onil, Onil Ismael Boussim, Ismael Onil, microeconomist, economist,Pennsylvania State University, Penn State, The Pennsylvania State University, international trade,
-    public finance, nonparametric method, micro-econometrics, causal inference, Theoretical Econometrics, Applied Econometrics, penn state ph.D, ensea, inphb, INPHB, student conference, onil, best economist, best PhD candidate, Best Macroeconomist, best African economist"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Research papers by Onil Boussim — Econometrics, Causal Inference, Categorical Outcomes"/>
+    <meta name="keywords"
+          content="onil boussim, Boussim Onil, Onil Ismael Boussim, microeconomist, economist, Pennsylvania State University, Penn State, nonparametric method, causal inference, Theoretical Econometrics, Applied Econometrics"/>
+    <title>Onil Boussim — Research</title>
     <link rel="icon" href="files/favicon.ico"/>
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="research-style.css" media="screen"/>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+          rel="stylesheet"/>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css"/>
+    <!-- Theme (run before paint to avoid flash) -->
+    <script src="theme.js"></script>
+    <style>
+        .research-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .paper-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--blue);
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 6px;
+            border: 1.5px solid rgba(59, 130, 246, 0.25);
+            background: var(--blue-pale);
+            transition: var(--transition);
+        }
+
+        .paper-link:hover {
+            background: var(--blue);
+            color: white;
+            border-color: var(--blue);
+        }
+    </style>
 </head>
 <body>
-<div id="header">
-    <h1 class="title-reference">Onil BOUSSIM</h1>
-    <div id="menu">
-        <ul id="nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="teaching.html">Teaching</a></li>
-            <li><a href="references.html">References</a></li>
-        </ul>
-    </div>
-</div>
-<div class="container">
-    <h1 style="color: black">Current Working Papers</h1>
 
-    <div class="cards-grid">
-        <div class="card">
-            <h2 class="card-title">
-                <p>🌐<a href="files/JMP.pdf">Compositional Difference-in-Differences</a></p>
-                <span class="jmp-badge">JMP</span>
-            </h2>
-            <p class="card-abstract">
-                <details>
-                    <summary>Show abstract</summary>
-                    <span class="abstract-content">
-Many policy evaluations involve vectors of category-specific quantities, either categorical outcomes (e.g., employment type, major choice) or compositional measures (e.g., GDP by sector, votes by party, electricity generation by source). In these settings, both intensive margins (shares) and extensive margins (totals) can matter. However, existing Difference-in-Differences (DiD) strategies typically focus only on the shares and do not jointly identify treatment effects on totals. In addition, these approaches usually lack a clear economic interpretation. I develop Compositional Difference-in-Differences (CoDiD), a new framework that identifies treatment effects on both shares and totals in a coherent way. The key assumption is parallel growth: in the absence of treatment, the log-quantities of each category would have evolved in parallel for the treated and control groups. I show that, under a random-utility discrete-choice model, this condition is equivalent to parallel trends in expected utilities, meaning that the change in average latent attractiveness for each alternative is identical across groups. Furthermore, geometrically, the counterfactual distributions (shares) follow parallel trajectories in the probability simplex. In settings with multiple time periods, I introduce a relaxation that delivers bounds when parallel growth may not hold. I illustrate the empirical relevance of the method by examining how early voting reforms affected the 2008 U.S. election.            </p>
-        </div>
-
-        <div class="card">
-            <h2 class="card-title">
-                 <p>🌐<a href="files/cor_sel.pdf">Correcting sample selection bias with categorical outcomes</a></p>
-            </h2>
-            <p class="card-abstract">
-                <details>
-                    <summary>Show abstract</summary>
-                    <span class="abstract-content">
-In this paper, I propose a method for correcting sample selection bias when the outcome of interest is categorical, such as occupational choice, health status, or field of study.  Classical approaches to sample selection rely on strong parametric distributional assumptions, which may be restrictive in practice. I develop a local representation that
-decomposes each joint probability into marginal probabilities and a category-specific association parameter that captures how selection differentially affects each outcome. Under some exclusion restrictions, I establish nonparametric point identification of the latent categorical distribution. Building on this identification result, I introduce a semiparametric multinomial logit model with sample selection, propose a computationally tractable two-step estimator, and derive its asymptotic properties. I illustrate the method by studying the determinants of healthcare utilization in Cote d'Ivoire.
-                    </span>
-                </details>     
-            </p>
-        </div>
-
-        <div class="card">
-            <h2 class="card-title">
-                <p>🌐<a href="https://arxiv.org/pdf/2510.10946">Identifying treatment effects on categorical outcomes in IV models</a></p>
-            </h2>
-            <p class="card-abstract">
-                <details>
-                    <summary>Show abstract</summary>
-                    <span class="abstract-content">
-This paper provides a nonparametric framework for causal inference
-with categorical outcomes under binary treatment and binary instrument settings. I decompose the observed joint probability of outcomes and treatment into marginal probabilities of potential outcomes and treatment, and association parameters that capture selection bias due to unobserved heterogeneity. Under a novel identifying assumption \emph{association similarity}, which requires the dependence between unobserved factors driving treatment and potential outcomes to be invariant across treatment states, I achieve point identification of the full distribution of potential outcomes. Recognizing that this assumption may be strong in some contexts, I propose two weaker alternatives: monotonic association, which restricts the direction of selection heterogeneity, and bounded association, which constrains its magnitude. These relaxed assumptions deliver sharp partial identification bounds that nest point identification as a special case and facilitate transparent sensitivity analysis. I illustrate the framework in an empirical application, estimating the causal effect of private health insurance on health outcomes.                </details>
-           The replication dataset be found here <a href="files/data_est.csv">Data</a>.
-            </p>
-
-            
-        </div>
-
-        <div class="card">
-            <h2 class="card-title">
-                <p>🌐<a href="https://arxiv.org/pdf/2309.10642" target="_blank">Correcting Sample Selection Bias in PISA Rankings</a></p>
-            </h2>
-            <p class="card-abstract">
-                <details>
-                    <summary>Show abstract</summary>
-                    <span class="abstract-content">
-                        This paper addresses the critical issue of sample selection bias in cross-country comparisons based on international assessments such as the Programme for International Student Assessment (PISA). Although PISA is widely used to benchmark educational performance across countries, it samples only students who remain enrolled in school at age 15. This introduces survival bias, particularly in countries with high dropout rates, potentially leading to distorted comparisons. To correct for this bias, I develop a simple adjustment of the classical Heckman selection model tailored to settings with fully truncated outcome data. My approach exploits the joint normality of latent errors and leverages information on the selection rate, allowing identification of the counterfactual mean outcome for the full population of 15-year-olds. Applying this method to PISA 2018 data, I show that adjusting for selection bias results in substantial changes in country rankings based on average performance. These results highlight the importance of accounting for non-random sample selection to ensure accurate and policy-relevant international comparisons of educational outcomes.
-                    </span>
-                </details>
-            </p>
+<!-- ===== HEADER ===== -->
+<header id="header">
+    <div class="header-inner">
+        <h1><a href="index.html">Onil Boussim</a></h1>
+        <div class="header-right">
+            <nav id="menu">
+                <ul id="nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="activelink"><a href="research.html">Research</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+                <span class="icon-moon">🌙</span>
+                <span class="icon-sun">☀️</span>
+            </button>
         </div>
     </div>
-</div>
+</header>
+
+<!-- ===== MAIN ===== -->
+<main>
+    <div class="page-wrapper">
+        <h2 class="page-title">Working Papers</h2>
+
+        <div class="cards-grid">
+
+            <!-- Paper 1 — JMP -->
+            <article class="card">
+                <div class="card-title">
+                    <p>Compositional Difference-in-Differences for Categorical Outcomes</p>
+                    <span class="jmp-badge">JMP</span>
+                </div>
+                <div class="research-meta">
+                    <a href="files/Compostional%20DiD.pdf" class="paper-link">
+                        <i class="fa fa-file-pdf"></i> PDF
+                    </a>
+                </div>
+                <div class="card-abstract">
+                    <details>
+                        <summary>Abstract</summary>
+                        <span class="abstract-content">
+              Many policy evaluations involve vectors of category-specific quantities, either through aggregation of categorical outcomes (e.g., employment type, major choice) or compositional measures (e.g., GDP by sector, votes by party, electricity generation by source). In such settings, beyond the quantities, treatment effects on both the within-category shares and the overall total across categories are often economically relevant.
+                            Standard approaches treat each category as a separate binary outcome and apply DiD independently.
+                            This often yields unrealistic counterfactual shares, fails to recover compositional effects and effects on totals, and lacks a clear economic interpretation.
+                            I develop Compositional Difference-in-Differences (CoDiD), a framework that jointly identifies treatment effects on totals and shares in an economically coherent way.
+                            The key assumption is parallel growth: absent treatment, vectors of log-quantities would have evolved in parallel across groups.
+                            Under a random-utility discrete-choice model, this is equivalent to parallel trends in expected utilities, so the average change in latent attractiveness is the same for treated and control units.
+                            Geometrically, counterfactual shares evolve along parallel paths in the probability simplex. For multiple periods, I also provide a relaxation that yields informative bounds.
+                            I illustrate the approach using the impact of early voting reforms on the 2008 U.S. election.
+            </span>
+                    </details>
+                </div>
+            </article>
+
+            <!-- Paper 2 — Compositional Synthetic Controls -->
+            <article class="card">
+                <div class="card-title">
+                    <p>Compositional Synthetic Controls</p>
+                </div>
+                <div class="research-meta">
+                    <a href="files/Compositional_SC.pdf" class="paper-link">
+                        <i class="fa fa-file-pdf"></i> PDF
+                    </a>
+                </div>
+                <div class="card-abstract">
+                    <details>
+                        <summary>Abstract</summary>
+                        <span class="abstract-content">
+                            Many policy evaluations involve vectors of category-specific quantities, arising either from the
+                            aggregation of categorical individual-level data (e.g., employment type, major choice) or from
+                            compositional measures defined at the aggregate level (e.g., GDP by sector, votes by party,
+                            electricity generation by source). In such settings, the shares of each category and the total
+                            across categories can each carry independent economic meaning. Practitioners typically apply the
+                            Synthetic Control Method to a single category of interest or to each category separately. The
+                            first approach discards information about the remaining categories and cannot identify the source
+                            of any compositional shift. The second produces a different set of donor weights for each
+                            category, so the implied counterfactuals do not correspond to a single hypothetical donor unit.
+                            This paper proposes <em>compositional synthetic controls</em>, a method that constructs a single
+                            synthetic counterfactual vector using one unified set of weights obtained by minimizing a distance
+                            between log-transformed quantities. Under a standard random utility framework, these weights admit
+                            a behavioral interpretation as measuring the similarity between the treated unit's representative
+                            agent and those of the control units in terms of preferences over alternatives. Geometrically,
+                            the implied synthetic shares coincide with the Fréchet barycenter on the probability simplex
+                            equipped with the Aitchison metric. I illustrate the method by studying the Colorado RPS policy
+                            on the electricity mix.
+                        </span>
+                    </details>
+                </div>
+            </article>
+
+            <!-- Paper 3 -->
+            <article class="card">
+                <div class="card-title">
+                    <p>Identifying Treatment Effects on Categorical Outcomes in IV Models</p>
+                </div>
+                <div class="research-meta">
+                    <a href="files/Identifying_treatment_effects_for_categorical_outcomes_in_IV_models.pdf" target="_blank" class="paper-link">
+                        <i class="fa fa-arrow-up-right-from-square"></i> arXiv
+                    </a>
+                </div>
+                <div class="card-abstract">
+                    <details>
+                        <summary>Abstract</summary>
+                        <span class="abstract-content">
+                            I develop a nonparametric framework for identifying treatment effects on
+unordered categorical outcomes using a binary instrumental variable. A
+local copula decomposition expresses each observed joint probability of
+outcome and treatment as a function of marginal potential-outcome
+probabilities and a Gaussian copula parameter encoding selection on
+unobservables. With a binary instrument, this system is underidentified
+by two degrees of freedom per outcome category. Under \emph{association
+similarity}, a new assumption requiring the copula parameter to be
+invariant across treatment states, the system becomes exactly identified
+and the full distribution of potential outcomes is nonparametrically
+point-identified. Two weaker alternatives, \emph{monotonic association}
+and \emph{bounded association}, deliver sharp partial identification bounds and a formal sensitivity analysis. I introduce a semiparametric IV
+multinomial logit model estimated by two-step maximum likelihood, prove
+$\sqrt{n}$-consistency, and conduct inference via bootstrap. Monte Carlo
+simulations confirm low bias and accurate coverage. An application to the Democratic Republic of Congo shows that improved market access reduces primary-sector employment by 21 percentage points and raises industrial employment by 14 percentage points.
+            </span>
+                    </details>
+                </div>
+            </article>
+
+        </div><!-- end cards-grid -->
+
+        <!-- ===== WORK IN PROGRESS ===== -->
+        <h2 class="page-title" style="margin-top: 60px;">Work in Progress</h2>
+
+        <div class="wip-list">
+
+            <div class="wip-item">
+                <div class="wip-bullet"><i class="fa fa-circle-half-stroke"></i></div>
+                <div class="wip-body">
+                    <span class="wip-title">Multinomial Logistic Regression with Sample Selection</span>
+                    <span class="wip-coauthors"><i class="fa fa-users"></i> with Yidi Zhao</span>
+                </div>
+            </div>
+
+            <div class="wip-item">
+                <div class="wip-bullet"><i class="fa fa-circle-half-stroke"></i></div>
+                <div class="wip-body">
+                    <span class="wip-title">Identification of Average Treatment Effects without Instruments in Linear Models</span>
+                </div>
+            </div>
+
+            <div class="wip-item">
+                <div class="wip-bullet"><i class="fa fa-circle-half-stroke"></i></div>
+                <div class="wip-body">
+                    <span class="wip-title">Identification of Health Distributions and Concentration Curves under Selective Attrition</span>
+                    <span class="wip-coauthors"><i class="fa fa-users"></i> with Marc Henry and Ivan Sidorov</span>
+                </div>
+            </div>
+
+        </div><!-- end wip-list -->
+
+        <style>
+        .wip-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .wip-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            padding: 22px 32px;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.2s ease;
+        }
+        .wip-item:last-child { border-bottom: none; }
+        .wip-item:hover { background: var(--bg); }
+        .wip-bullet {
+            color: var(--blue-light);
+            font-size: 1rem;
+            margin-top: 2px;
+            flex-shrink: 0;
+            opacity: 0.7;
+        }
+        .wip-body {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .wip-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.45;
+        }
+        .wip-coauthors {
+            font-size: 0.83rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-style: italic;
+        }
+        .wip-coauthors i { color: var(--blue-light); font-size: 0.85em; font-style: normal; }
+        @media (max-width: 600px) {
+            .wip-item { padding: 18px 20px; }
+        }
+        </style>
+
+    </div>
+</main>
+
 </body>
 </html>

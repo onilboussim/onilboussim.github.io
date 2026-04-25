@@ -1,91 +1,805 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta name="google-site-verification" content="I3GAMdWFlVX9I1t6MyOhMOST-TYgMF2X3xr1_56BgPE"/>
-    <meta name="keywords" content="onil boussim, Boussim Onil, Onil Ismael Boussim, Ismael Onil, microeconomist, economist,Pennsylvania State University, Penn State, The Pennsylvania State University, international trade,
-    public finance, nonparametric method, micro-econometrics, causal inference, Theoretical Econometrics, Applied Econometrics, penn state ph.D, ensea, inphb, INPHB, student conference, onil, best economist, best PhD candidate, Best Macroeconomist, best African economist"/>
-    <title>Onil BOUSSIM</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="files/favicon.ico"/>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="index-style.css" media="screen"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="google-site-verification" content="I3GAMdWFlVX9I1t6MyOhMOST-TYgMF2X3xr1_56BgPE"/>
+  <meta name="description" content="Onil Boussim — PhD Candidate in Economics at Penn State University. Research in Theoretical and Applied Econometrics."/>
+  <meta name="keywords" content="onil boussim, Boussim Onil, Onil Ismael Boussim, microeconomist, economist, Pennsylvania State University, Penn State, nonparametric method, causal inference, Theoretical Econometrics, Applied Econometrics"/>
+  <title>Onil Boussim — Economist</title>
+  <link rel="icon" href="files/favicon.ico"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="theme.js"></script>
+
+  <style>
+  /* =============================
+     HOME PAGE — FULL REDESIGN
+     ============================= */
+
+  /* ---- HERO ---- */
+  .hero {
+    background: linear-gradient(135deg, #0c1a3a 0%, #0f2355 40%, #0e1e48 70%, #0a1628 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 80px 32px 96px;
+  }
+
+  /* Subtle grid texture */
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+  }
+
+  /* Glowing blob top-right */
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(59,130,246,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ---- Photo ring ---- */
+  .hero-photo-wrap {
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .hero-photo-ring {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 50%, #6366f1 100%);
+    box-shadow: 0 0 0 8px rgba(59,130,246,0.12), 0 24px 60px rgba(0,0,0,0.4);
+    animation: ring-pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes ring-pulse {
+    0%, 100% { box-shadow: 0 0 0 8px rgba(59,130,246,0.12), 0 24px 60px rgba(0,0,0,0.4); }
+    50%       { box-shadow: 0 0 0 14px rgba(59,130,246,0.08), 0 24px 60px rgba(0,0,0,0.4); }
+  }
+
+  .hero-photo-ring img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+  }
+
+  /* Job market badge on photo */
+  .jm-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #f59e0b, #f97316);
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+    box-shadow: 0 4px 14px rgba(245,158,11,0.45);
+  }
+
+  /* ---- Hero text ---- */
+  .hero-text {
+    color: white;
+  }
+
+  .hero-name {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #ffffff 40%, #93c5fd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-role {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 6px;
+    letter-spacing: 0.01em;
+  }
+
+  .hero-role strong {
+    color: rgba(255,255,255,0.9);
+    font-weight: 600;
+  }
+
+  .hero-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 28px;
+  }
+
+  .hero-location i {
+    color: #60a5fa;
+    font-size: 0.85em;
+  }
+
+  /* Research focus line */
+  .hero-focus {
+    font-size: 0.97rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    margin-bottom: 32px;
+    max-width: 560px;
+    border-left: 3px solid rgba(96,165,250,0.5);
+    padding-left: 16px;
+    font-style: italic;
+  }
+
+  /* CTA Buttons */
+  .hero-cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 22px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.22s cubic-bezier(0.4,0,0.2,1);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-primary {
+    background: var(--blue);
+    color: white;
+    box-shadow: 0 2px 12px rgba(29,78,216,0.4);
+  }
+  .btn-primary:hover {
+    background: #1e40af;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(29,78,216,0.5);
+  }
+
+  .btn-glass {
+    background: rgba(255,255,255,0.10);
+    color: rgba(255,255,255,0.9);
+    border: 1.5px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
+  }
+  .btn-glass:hover {
+    background: rgba(255,255,255,0.18);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  /* Social pill links */
+  .hero-social {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .social-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 0.83rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.65);
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.06);
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+  .social-pill i { font-size: 0.9em; color: #60a5fa; }
+  .social-pill:hover {
+    color: white;
+    border-color: rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-1px);
+  }
+
+  /* ---- MAIN CONTENT ---- */
+  .home-body {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 52px 32px 80px;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 36px;
+    align-items: start;
+  }
+
+  /* ---- LEFT AREA ---- */
+  .home-left {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  /* Section card */
+  .section-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px 40px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.22s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .section-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  .section-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--blue) 0%, var(--accent) 100%);
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .section-card:hover::before { opacity: 1; }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    background: var(--blue-pale);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(59,130,246,0.18);
+  }
+  [data-theme="dark"] .section-label {
+    background: rgba(96,165,250,0.12);
+  }
+
+  .section-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+    line-height: 1.3;
+  }
+
+  .section-body {
+    font-size: 0.97rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+  .section-body a {
+    color: var(--blue);
+    font-weight: 600;
+  }
+  .section-body a:hover { text-decoration: underline; }
+
+  /* Research interests grid */
+  .interests-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .interest-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    transition: all 0.2s ease;
+  }
+  .interest-item:hover {
+    border-color: var(--blue-light);
+    background: var(--blue-pale);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+  }
+  [data-theme="dark"] .interest-item:hover {
+    background: rgba(96,165,250,0.08);
+  }
+  .interest-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+  .interest-dot.primary { background: var(--blue); }
+  .interest-dot.secondary { background: var(--text-muted); }
+
+  .interest-name {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+  }
+  .interest-type {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  /* ---- PRESENTATIONS TIMELINE ---- */
+  .timeline {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 0;
+    position: relative;
+  }
+
+  .timeline-item:not(:last-child) .tl-line {
+    position: absolute;
+    left: 28px;
+    top: 36px;
+    bottom: -14px;
+    width: 2px;
+    background: var(--border);
+    z-index: 0;
+  }
+
+  .tl-year-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .tl-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid var(--blue);
+    background: var(--card-bg);
+    flex-shrink: 0;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+    transition: all 0.2s ease;
+  }
+  .timeline-item:hover .tl-dot {
+    background: var(--blue);
+    box-shadow: 0 0 0 5px rgba(59,130,246,0.2);
+  }
+
+  .tl-body {
+    padding: 8px 0 28px 20px;
+  }
+
+  .tl-event {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+
+  .tl-where {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .tl-where i { font-size: 0.8em; color: var(--blue-light); }
+
+  .tl-year {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--blue);
+    background: var(--blue-pale);
+    border-radius: 6px;
+    padding: 2px 7px;
+    display: inline-block;
+    margin-top: 6px;
+  }
+
+  /* ---- RIGHT SIDEBAR ---- */
+  .home-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 88px;
+  }
+
+  /* Sidebar card */
+  .side-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 22px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .side-card-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .side-card-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* Quick links */
+  .quick-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-bottom: 8px;
+  }
+  .quick-link:last-child { margin-bottom: 0; }
+  .quick-link:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+    background: var(--blue-pale);
+    transform: translateX(3px);
+  }
+  [data-theme="dark"] .quick-link:hover {
+    background: rgba(96,165,250,0.1);
+  }
+  .quick-link i {
+    width: 20px;
+    text-align: center;
+    color: var(--blue-light);
+    font-size: 0.95em;
+  }
+  .quick-link-arrow {
+    margin-left: auto;
+    color: var(--text-muted);
+    font-size: 0.8em;
+    transition: transform 0.2s;
+  }
+  .quick-link:hover .quick-link-arrow {
+    transform: translateX(3px);
+    color: var(--blue);
+  }
+
+  /* Contact block */
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.88rem;
+    color: var(--text-muted);
+  }
+  .contact-row:last-child { border-bottom: none; }
+  .contact-row i { color: var(--blue-light); width: 16px; text-align: center; font-size: 0.9em; }
+  .contact-row a { color: var(--blue); font-weight: 500; }
+  .contact-row a:hover { text-decoration: underline; }
+
+  /* =============================
+     RESPONSIVE
+     ============================= */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 32px; }
+    .hero-photo-wrap { margin: 0 auto; }
+    .hero-focus { margin: 0 auto 32px; border-left: none; border-top: 3px solid rgba(96,165,250,0.4); padding: 12px 0 0; }
+    .hero-cta, .hero-social { justify-content: center; }
+    .home-body { grid-template-columns: 1fr; }
+    .home-right { position: relative; top: 0; }
+    .interests-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding: 48px 20px 56px; }
+    .hero-photo-ring { width: 160px; height: 160px; }
+    .home-body { padding: 32px 20px 60px; }
+    .section-card { padding: 24px 22px; }
+  }
+  </style>
 </head>
 <body>
-<div id="header">
-    <h1>Onil BOUSSIM</h1>
-    <div id="menu">
+
+<!-- ===== HEADER ===== -->
+<header id="header">
+  <div class="header-inner">
+    <h1><a href="index.html">Onil Boussim</a></h1>
+    <div class="header-right">
+      <nav id="menu">
         <ul id="nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="teaching.html">Teaching</a></li>
-            <li><a href="references.html">References</a></li>
-
+          <li class="activelink"><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="references.html">References</a></li>
         </ul>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+        <span class="icon-moon">🌙</span>
+        <span class="icon-sun">☀️</span>
+      </button>
     </div>
-</div>
+  </div>
+</header>
 
-<div class="container">
-        <div class="main-content">
-            <div class="left-column">
-                <img src="files/dr-onil-photo.jpg" alt="A person smiling in a dark shirt" id="picture">
-                <ul class="style-list">
-                    <li>
-                        <a href="mailto:oib5044@psu.edu" class="social-links">
-                            <i class="fa fa-envelope"></i>
-                            <span>oib5044@psu.edu</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/onil-boussim-307005118/" target="_blank" class="social-links">
-                            <i class="fa fa-linkedin"></i>
-                            <span>Linkedin profile</span>
-                        </a>
-                    </li>
-                    <li>
-                        <i class="fa fa-map-marker"></i> State College, Pennsylvania
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="right-column">
-                <section>
-                    <h2>Welcome to my website!</h2>
-                    <p>
-                        I'm Ph.D Candidate in Economics at <a href="https://econ.la.psu.edu/">Pennsylvania State University</a>.
-                    </p>
-                    <p>
-                    I will be joining the Department of Economics at the California Polytechnic State University, San Luis Obispo, as an Assistant Professor in Fall 2026.
-                    I was also selected as a <a href="https://www.worldbank.org/en/region/afr/brief/world-bank-group-africa-fellowship-program">World Bank Group Africa Fellow 2026</a>  to work on research projects for the Democratic Republic of Congo (January-June 2026).
-                    My  current CV can  be found here <a href="files/CV_Onil_B.pdf">CV</a>. 
-                    </p>
-                    
-                </section>
-                
-                <section>
-                    <h2>Research interests</h2>
-                    <ul>
-                        <li>Primary field: Theoretical Econometrics</li>
-                        <li>Secondary fields (Applied Econometrics): Education, Health, Political science, Energy</li>
-                    </ul>
-                    <p>
-                        My current projects involve nonparametric methods for identification and estimation in causal inference and sample selection problems with non-scalar data (categorical outcomes, multivariate outcomes, distributional outcomes...)
-                    </p>
-                </section>
-                
-                <section>
-                    <h2>Some Academic Presentations</h2>
-                    <ul><li> Optimal Transport and Distributional Robustness, Banff, Alberta 2024</li>
-                        <li>Africa Meeting of the Econometric Society (AFES), Abidjan, Côte d'Ivoire, 2024</li>
-                        <li>First conference of RESA Alumni Abidjan, Côte d'Ivoire, 2025</li>
-                    </ul>
-                </section>
-            </div>
-        </div>
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <!-- Photo -->
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-ring">
+        <img src="files/img.png" alt="Onil Boussim"/>
+      </div>
+      <span class="jm-badge">Incoming Asst. Professor · Cal Poly SLO</span>
     </div>
+
+    <!-- Text -->
+    <div class="hero-text">
+      <h1 class="hero-name">Onil Boussim</h1>
+      <p class="hero-role">PhD Candidate · <strong>Department of Economics</strong></p>
+      <p class="hero-role" style="margin-bottom: 12px;">Pennsylvania State University</p>
+      <p class="hero-location">
+        <i class="fa fa-location-dot"></i> State College, Pennsylvania
+      </p>
+
+      <p class="hero-focus">
+        Incoming Assistant Professor at Cal Poly SLU (Fall 2026) &amp;
+        World Bank Group Africa Fellow (2026).
+        Research in nonparametric methods, causal inference, and categorical data.
+      </p>
+
+      <div class="hero-cta">
+        <a href="files/JMP.pdf" class="btn btn-primary">
+          <i class="fa fa-file-pdf"></i> Job Market Paper
+        </a>
+        <a href="files/Cv_Onil_Boussim_2026.pdf" class="btn btn-glass">
+          <i class="fa fa-file-lines"></i> Curriculum Vitae
+        </a>
+        <a href="research.html" class="btn btn-glass">
+          <i class="fa fa-microscope"></i> All Research
+        </a>
+      </div>
+
+      <div class="hero-social">
+        <a href="mailto:oib5044@psu.edu" class="social-pill">
+          <i class="fa fa-envelope"></i> oib5044@psu.edu
+        </a>
+        <a href="https://www.linkedin.com/in/onil-boussim-307005118/" target="_blank" class="social-pill">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== BODY ===== -->
+<div class="home-body">
+
+  <!-- LEFT — Main sections -->
+  <div class="home-left">
+
+    <!-- About -->
+    <div class="section-card">
+      <span class="section-label"><i class="fa fa-user"></i> About</span>
+      <h2 class="section-title">Welcome to my academic homepage</h2>
+      <p class="section-body">
+        I am a Ph.D. candidate in Economics at
+        <a href="https://econ.la.psu.edu/" target="_blank">The Pennsylvania State University</a>.
+      </p>
+      <p class="section-body" style="margin-top: 10px;">
+        I will join the Department of Economics at
+        <a href="https://www.calpoly.edu/major/economics" target="_blank">California Polytechnic State University, San Luis Obispo</a>,
+        as an <strong>Assistant Professor</strong> in Fall 2026.
+        I was also selected as a <strong>World Bank Group Africa Fellow (2026)</strong>, where I worked on
+        research projects focused on the Democratic Republic of Congo from January to May 2026.
+      </p>
+    </div>
+
+    <!-- Research Interests -->
+    <div class="section-card">
+      <span class="section-label"><i class="fa fa-magnifying-glass-chart"></i> Research</span>
+      <h2 class="section-title">Research Interests</h2>
+      <div class="interests-grid">
+        <div class="interest-item">
+          <span class="interest-dot primary"></span>
+          <div>
+            <div class="interest-name">Theoretical Econometrics</div>
+            <div class="interest-type">Primary field</div>
+          </div>
+        </div>
+        <div class="interest-item">
+          <span class="interest-dot primary"></span>
+          <div>
+            <div class="interest-name">Nonparametric Methods</div>
+            <div class="interest-type">Primary field</div>
+          </div>
+        </div>
+        <div class="interest-item">
+          <span class="interest-dot primary"></span>
+          <div>
+            <div class="interest-name">Causal Inference</div>
+            <div class="interest-type">Primary field</div>
+          </div>
+        </div>
+        <div class="interest-item">
+          <span class="interest-dot secondary"></span>
+          <div>
+            <div class="interest-name">Education Economics</div>
+            <div class="interest-type">Applied — secondary</div>
+          </div>
+        </div>
+        <div class="interest-item">
+          <span class="interest-dot secondary"></span>
+          <div>
+            <div class="interest-name">Health Economics</div>
+            <div class="interest-type">Applied — secondary</div>
+          </div>
+        </div>
+        <div class="interest-item">
+          <span class="interest-dot secondary"></span>
+          <div>
+            <div class="interest-name">Energy &amp; Politics</div>
+            <div class="interest-type">Applied — secondary</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Presentations -->
+    <div class="section-card">
+      <span class="section-label"><i class="fa fa-microphone-lines"></i> Presentations</span>
+      <h2 class="section-title">Academic Presentations</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="tl-line"></div>
+          <div class="tl-year-col"><div class="tl-dot"></div></div>
+          <div class="tl-body">
+            <div class="tl-event">First Conference of RESA Alumni</div>
+            <p class="tl-where"><i class="fa fa-location-dot"></i> Abidjan, Côte d'Ivoire</p>
+            <span class="tl-year">2025</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-line"></div>
+          <div class="tl-year-col"><div class="tl-dot"></div></div>
+          <div class="tl-body">
+            <div class="tl-event">Africa Meeting of the Econometric Society (AFES)</div>
+            <p class="tl-where"><i class="fa fa-location-dot"></i> Abidjan, Côte d'Ivoire</p>
+            <span class="tl-year">2024</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-year-col"><div class="tl-dot"></div></div>
+          <div class="tl-body">
+            <div class="tl-event">Optimal Transport and Distributional Robustness</div>
+            <p class="tl-where"><i class="fa fa-location-dot"></i> Banff, Alberta, Canada</p>
+            <span class="tl-year">2024</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- end home-left -->
+
+  <!-- RIGHT SIDEBAR -->
+  <aside class="home-right">
+
+    <!-- Contact -->
+    <div class="side-card">
+      <div class="side-card-title">Contact</div>
+      <div class="contact-row">
+        <i class="fa fa-envelope"></i>
+        <a href="mailto:oib5044@psu.edu">oib5044@psu.edu</a>
+      </div>
+      <div class="contact-row">
+        <i class="fa-brands fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/onil-ismael-boussim-307005118/" target="_blank">LinkedIn Profile</a>
+      </div>
+      <div class="contact-row">
+        <i class="fa fa-building-columns"></i>
+        <span>Kern Building, Penn State</span>
+      </div>
+      <div class="contact-row">
+        <i class="fa fa-location-dot"></i>
+        <span>State College, PA</span>
+      </div>
+    </div>
+
+    <!-- Featured paper -->
+    <div class="side-card" style="background: linear-gradient(135deg, #0c1a3a 0%, #0f2355 100%); border-color: transparent;">
+      <div class="side-card-title" style="color: rgba(255,255,255,0.5);">Featured Paper</div>
+      <div style="font-size: 0.9rem; font-weight: 700; color: white; line-height: 1.4; margin-bottom: 10px;">
+        Compositional DiD for Categorical Outcomes
+      </div>
+      <div style="font-size: 0.82rem; color: rgba(255,255,255,0.55); line-height: 1.6; margin-bottom: 16px;">
+        A new framework for DiD with categorical outcomes. Applications to early voting and energy policy.
+      </div>
+      <a href="files/JMP.pdf" style="display:inline-flex; align-items:center; gap:7px; background:rgba(255,255,255,0.12); color:white; border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:8px; font-size:0.85rem; font-weight:600; text-decoration:none; transition:all 0.2s ease;"
+         onmouseover="this.style.background='rgba(255,255,255,0.22)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">
+        <i class="fa fa-file-pdf"></i> Read Paper
+      </a>
+    </div>
+
+  </aside><!-- end home-right -->
+
+</div><!-- end home-body -->
+
 </body>
 </html>

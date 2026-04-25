@@ -1,56 +1,206 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Onil BOUSSIM: Teaching</title>
-    <meta name="google-site-verification" content="I3GAMdWFlVX9I1t6MyOhMOST-TYgMF2X3xr1_56BgPE"/>
-    <meta name="keywords" content="onil boussim, Boussim Onil, Onil Ismael Boussim, Ismael Onil, microeconomist, economist,Pennsylvania State University, Penn State, The Pennsylvania State University, international trade,
-    public finance, nonparametric method, micro-econometrics, causal inference, Theoretical Econometrics, Applied Econometrics, penn state ph.D, ensea, inphb, INPHB, student conference, onil, best economist, best PhD candidate, Best Macroeconomist, best African economist"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="files/favicon.ico"/>
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="teaching-style.css" media="screen"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="google-site-verification" content="I3GAMdWFlVX9I1t6MyOhMOST-TYgMF2X3xr1_56BgPE"/>
+  <meta name="description" content="Teaching experience of Onil Boussim — Econometrics, Development Economics, Penn State University"/>
+  <meta name="keywords" content="onil boussim, Boussim Onil, Onil Ismael Boussim, microeconomist, economist, Pennsylvania State University, Penn State, nonparametric method, causal inference, Theoretical Econometrics, Applied Econometrics"/>
+  <title>Onil Boussim — Teaching</title>
+  <link rel="icon" href="files/favicon.ico"/>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css"/>
+  <!-- Theme (run before paint to avoid flash) -->
+  <script src="theme.js"></script>
+  <style>
+    .teaching-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .teaching-card {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      padding: 32px 30px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .teaching-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--blue) 0%, var(--accent) 100%);
+    }
+    .teaching-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+    .teaching-card h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .teaching-card h2 i {
+      color: var(--blue-light);
+      font-size: 1em;
+    }
+    .course-item {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+    .course-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .course-name {
+      font-weight: 600;
+      color: var(--text);
+      display: block;
+    }
+    .course-meta {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+    .course-meta a {
+      color: var(--blue);
+      font-weight: 500;
+    }
+    .philosophy-card {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      color: white;
+      border: none;
+      grid-column: 1 / -1;
+    }
+    .philosophy-card::before {
+      background: linear-gradient(90deg, var(--gold) 0%, var(--accent) 100%);
+    }
+    .philosophy-card h2 {
+      color: white;
+    }
+    .philosophy-card p {
+      color: rgba(255,255,255,0.80);
+      font-size: 0.97rem;
+      line-height: 1.8;
+      margin: 0;
+    }
+    .principle-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .principle-tag {
+      background: rgba(255,255,255,0.12);
+      color: white;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.83rem;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+  </style>
 </head>
 <body>
-<div id="header">
-    <h1>Onil BOUSSIM</h1>
-    <div id="menu">
+
+<!-- ===== HEADER ===== -->
+<header id="header">
+  <div class="header-inner">
+    <h1><a href="index.html">Onil Boussim</a></h1>
+    <div class="header-right">
+      <nav id="menu">
         <ul id="nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="teaching.html">Teaching</a></li>
-            <li><a href="references.html">References</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li class="activelink"><a href="teaching.html">Teaching</a></li>
+          <li><a href="references.html">References</a></li>
         </ul>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+        <span class="icon-moon">🌙</span>
+        <span class="icon-sun">☀️</span>
+      </button>
     </div>
-</div>
+  </div>
+</header>
+
+<!-- ===== MAIN ===== -->
 <main>
-    <div class="container">
-        <div class="cards-grid">
-            <section class="card">
-                <h2 class="card-title">Teachings Overview</h2>
-                <P>I am deeply passionate about teaching, and throughout my Ph.D., and before,  I have accumulated valuable experience
-                    through my diverse teaching activities. My teaching philosophy rests on three core principles: motivation, intuition, and engagement</P>
-            </section>
-            <section class="card">
-                <h2 class="card-title">Instructor</h2>
-                <p>
-                <ul>
-                    <li>Introduction to Time Series for ,
-                        Master Level, CNAM Abidjan (2020), <a href="https://lecnam.inphb.ci/master-big-data/">Link</a>
-                    </li>
-                </ul>
-            </section>
-            <section class="card">
-                <h2 class="card-title">Teaching Assistant</h2>
-                <p>
-                <ul>
-                    <li> Econometrics (ECON 510), PhD Level , Spring 2025</li>
-                    <li> Econometrics (ECON 501), Master Level , Fall 2023</li>
-                    <li> Development Economics, Undergraduate level, Fall 2021</li>
-                </ul>
-            </section>
+  <div class="page-wrapper">
+    <h2 class="page-title">Teaching</h2>
+
+    <div class="teaching-grid">
+
+      <!-- Philosophy card — full width -->
+      <div class="teaching-card philosophy-card">
+        <h2><i class="fa fa-lightbulb"></i> Teaching Philosophy</h2>
+        <p>
+          I am deeply passionate about teaching, and throughout my PhD — and before —
+          I have accumulated valuable experience through diverse teaching activities.
+          My teaching philosophy rests on three core principles:
+        </p>
+        <div class="principle-tags">
+          <span class="principle-tag">Motivation</span>
+          <span class="principle-tag">Intuition</span>
+          <span class="principle-tag">Engagement</span>
         </div>
+      </div>
+
+      <!-- Instructor -->
+      <div class="teaching-card">
+        <h2><i class="fa fa-chalkboard-user"></i> Instructor</h2>
+
+        <div class="course-item">
+          <span class="course-name">Introduction to Time Series</span>
+          <span class="course-meta">
+            Master Level · CNAM Abidjan (2020)<br/>
+            <a href="https://lecnam.inphb.ci/master-big-data/" target="_blank">
+              Big Data Master Program ↗
+            </a>
+          </span>
+        </div>
+      </div>
+
+      <!-- Teaching Assistant -->
+      <div class="teaching-card">
+        <h2><i class="fa fa-person-chalkboard"></i> Teaching Assistant</h2>
+
+        <div class="course-item">
+          <span class="course-name">Econometrics (ECON 510)</span>
+          <span class="course-meta">PhD Level · Penn State · Spring 2025</span>
+        </div>
+
+        <div class="course-item">
+          <span class="course-name">Econometrics (ECON 501)</span>
+          <span class="course-meta">Master Level · Penn State · Fall 2023</span>
+        </div>
+
+        <div class="course-item">
+          <span class="course-name">Development Economics</span>
+          <span class="course-meta">Undergraduate · Penn State · Fall 2021</span>
+        </div>
+      </div>
+
     </div>
+  </div>
 </main>
+
 </body>
 </html>
